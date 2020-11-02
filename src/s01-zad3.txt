@@ -1,0 +1,7 @@
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  stoi
+Aborted (core dumped)
+
+Wniosek:
+
+Każdy rodzaj zmiennej ma ograniczoną pamięć. Przekroczenie jej powoduje wyskoczenie komunikatu wyżej. 

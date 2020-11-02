@@ -1,0 +1,10 @@
+terminate called after throwing an instance of 'std::logic_error'
+  what():  basic_string::_M_construct null not valid
+Aborted (core dumped)
+
+Moje Wnioski:
+Wywołany błąd jest spowodowany brakiem podania zmienniej/argumentu (std::logic_error - błąd ogólny), natomiast błąd: basic_sdtring::_M_construct nul not valid - nie znalazłem jasnej odpowiedzi.
+
+std::logic_error - Zgłasza błędy, które są konsekwencją wadliwej logiki w programie, takie jak naruszenie logicznych warunków wstępnych lub niezmienników klas, i można temu zapobiec.
+
+
