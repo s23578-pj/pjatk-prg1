@@ -3,10 +3,10 @@
 
 auto main(int, char* argv[]) -> int
 {
-    auto liczba = std::stoi(argv[1]);
+    auto const liczba = std::stoi(argv[1]);
 
     // std::cout << "jesteśmy tu\n";
-    for (int i = liczba; i >= 0; --i) {
+    for (auto i = liczba; i >= 0; --i) {
         std::cout << i << "... \n";
     }
     std::cout << "Koniec skryptu :D \n";

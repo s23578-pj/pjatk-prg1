@@ -1,17 +1,20 @@
-#include <cstdlib>
-#include <ctime>
 #include <iostream>
+#include <random>
+#include <string>
+auto ask_user_for_integer() -> int
+{
+    std::cout << "Chose number from 1-100\n";
+    auto n = std::string();
+    std::getline(std::cin, n);
+    return std::stoi(n);
+}
 int main()
 {
-    srand(time(NULL));
-    int losuj = ((std::rand() % 50) + 7);
-    // std::cout << "Wylosowanie pierwsze: " << losuj << std::endl;
-    std::cout << "Chose number from 1-100\n";
-
+    std::random_device rd;
+    std::uniform_int_distribution<int> sto(1, 100);
+    int losuj = sto(rd);
     while (true) {
-        std::cout << "Your number:";
-        int zgaduj_liczbe;
-        std::cin >> zgaduj_liczbe;
+        int zgaduj_liczbe = ask_user_for_integer();
         if (losuj == zgaduj_liczbe) {
             std::cout << "just right!\n";
             break;

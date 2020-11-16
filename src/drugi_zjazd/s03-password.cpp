@@ -11,9 +11,7 @@ auto main(int, char* argv[]) -> int
     while (haslo != poprawnehaslo) {
         std::cout << "jeszcze raz:";
         std::getline(std::cin, haslo);
-        if (haslo == poprawnehaslo) {
-            std::cout << "ok!\n";
-        }
     }
+    std::cout << "ok!\n";
     return 0;
 }
