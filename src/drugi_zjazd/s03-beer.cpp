@@ -1,9 +1,12 @@
 #include <iostream>
 
-auto main(int, char* argv[]) -> int
+auto main(int argc, char* argv[]) -> int
 {
-    auto const beer = std::stoi(argv[1]);
-
+    // auto const beer = std::stoi(argv[1]);
+    auto beer = 99;
+    if (argc > 1) {
+        beer = std::stoi(argv[1]);
+    }
     for (auto i = beer; i >= 1; i--) {
         std::cout << i << " bottles of beer on the wall. " << i
                   << " bottles of beer \n";
