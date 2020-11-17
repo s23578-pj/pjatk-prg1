@@ -1,22 +1,17 @@
 #include <iostream>
 #include <string>
 
-auto ask_user_for_password(std::string prompt) -> int
+auto main(int, char* argv[]) -> int
 {
-    std::cout << prompt << "password:";
-    auto n = std::string();
-    std::getline(std::cin, n);
-    return std::stoi(n);
-}   
+    auto const poprawnehaslo = std::string{argv[1]};
+    auto haslo               = std::string{};
+    std::cout << "Podaj haslo:\n";
+    std::getline(std::cin, haslo);
 
- auto main () -> int
-{
-    auto const a = ask_user_for_password(" a = ");
-    if (a != student) {
-        std::cout <<"Nie poprawne hasło\n";
-    else (a = student) {
-        std::cout <<"ok!\n";
+    while (haslo != poprawnehaslo) {
+        std::cout << "jeszcze raz:";
+        std::getline(std::cin, haslo);
     }
-    std::cout << a << "\n";
-        return 0;
+    std::cout << "ok!\n";
+    return 0;
 }
