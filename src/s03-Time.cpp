@@ -1,5 +1,5 @@
-#include <s23578/Time.h>
 #include <iostream>
+#include <s23578/Time.h>
 #include <sstream>
 
 s23578::Time::Time(size_t h, size_t m, size_t s)

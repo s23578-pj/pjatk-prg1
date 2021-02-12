@@ -1,20 +1,20 @@
 #include <iostream>
 
-auto iota (int a [], int n) -> void
-{
-    a[n]= {};
-    std::cout << "Tablica, której początkiem jest zmienna start " << n <<  std::endl;
-    for ( int i= 0; i<n; i++) {
-        std::cout << a[i]++ << " ";  
-    }
-    std::cout<<std::endl;
+auto asum(int a[], int n, int suma) -> int {
+  suma = 0;
+  a[n] = {};
+  std::cout << std::endl << "Suma tych wartości wynosi: " << std::endl;
+  for (int x = 0; x < n; x++) {
+    suma += a[x];
+  }
+  std::cout << suma << std::endl;
+  return suma;
 }
 
-int main () 
-{
-    
-    const int n = 10;
-    int a[n]= {1,5,3,2,6,1,2,7};
-    iota (a, n);
-    return 0;
+int main() {
+  int suma = 0;
+  const int n = 10;
+  int a[n] = {1, 5, 3, 2, 6, 1, 2, 7, 2, 2};
+  asum(a, n, suma);
+  return 0;
 }

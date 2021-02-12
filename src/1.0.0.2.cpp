@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-//Zadanie 1.0.0.2 Dodawanie
+// Zadanie 1.0.0.2 Dodawanie
 auto main(int argc, char *argv[]) -> int {
   if (argc == 0) {
     return 1;
@@ -11,4 +11,3 @@ auto main(int argc, char *argv[]) -> int {
   std::cout << (a + b) << "\n";
   return 0;
 }
-

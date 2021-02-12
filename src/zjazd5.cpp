@@ -78,7 +78,8 @@ auto main() -> int
     std::cin >> a;
     if (a < 0)
     {
-        std::cout << "Absolute value of Your number is: " << (-1)*a << std::endl;
+        std::cout << "Absolute value of Your number is: " << (-1)*a <<
+std::endl;
     }
     else
     {
@@ -124,13 +125,13 @@ auto main() -> int
     auto const a = ask_user_for_integer(" a = ");
     if(a > 0) {
         std::cout << 1 << std::endl;
-    }    
+    }
     if(a == 0){
         std::cout << 0 << std::endl;
-    }    
+    }
     if(a < 0){
         std::cout << -1 << std::endl;
-    }    
+    }
     return 0;
 }
 
@@ -168,7 +169,7 @@ auto main() -> int
 }
 
 // Zadanie 2.0.0.1 Lista liczb
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -188,7 +189,7 @@ auto main() -> int
 }
 
 // Zadanie 2.0.0.2 Lista liczb(2)
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -203,7 +204,7 @@ auto main() -> int
     auto b = ask_user_for_integer("b = ");
     auto c = ask_user_for_integer("c = ");
         if(c == 0){
-            std::cerr << "Do not divide by 0!" << std::endl; 
+            std::cerr << "Do not divide by 0!" << std::endl;
             return 1;
         }
     for(auto x = a; x < b; x++){
@@ -215,7 +216,7 @@ auto main() -> int
 }
 
 // Zadanie 2.0.0.3 Lista Liczb(3)
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -230,8 +231,8 @@ auto main() -> int
     auto b = ask_user_for_integer("b = ");
     auto s = ask_user_for_integer("s = ");
         if(s == 0){
-            std::cerr << "\n<<ERROR!>>\n" << "s` value cannot be 0!"<< std::endl;
-            return 1;    
+            std::cerr << "\n<<ERROR!>>\n" << "s` value cannot be 0!"<<
+std::endl; return 1;
         }
     std::cout << std::endl;
     if(s > 0){
@@ -248,7 +249,7 @@ auto main() -> int
 }
 
 // Zadanie 2.0.0.4 Liczba pierwsza
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -265,16 +266,16 @@ int main()
 
         std::cout << "Enter the Number to check Prime: " << std::endl;
         auto n = ask_user_for_integer("n = ");
-        
+
         if(n < 2 && n > -1)
         {
             std::cout << "Number is not Prime" << std::endl;
             continue;
-        }        
+        }
         else if(n < 0)
         {
             std::cout << "This is not a positive number" << std::endl;
-            continue;        
+            continue;
 
         }
         m = n / 2;
@@ -299,7 +300,7 @@ int main()
 
 
 // Zadanie 2.0.0.7 Suma Podzielnych
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -312,7 +313,7 @@ auto main() -> int
 {
     auto l = ask_user_for_integer("Limit = ");
     auto d = ask_user_for_integer("Dzielnik = ");
-    
+
     int s = 0;
     for( auto i = l; 1 <= i; i--){
         if(i % d == 0) {
@@ -326,7 +327,7 @@ auto main() -> int
 
 // Zadanie 2.0.0.8 Silnia (for)
 
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -348,7 +349,7 @@ auto main() -> int
 
 
 // Zadanie 2.0.0.9 WHILE
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -375,7 +376,7 @@ auto main() -> int
 
 
 // Zadanie 2.0.0.10 DO-WHILE
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -401,7 +402,7 @@ auto main() -> int
 }
 
 // Zadanie 2.0.0.11 RYSOWANIE FIGURY (prostokąt)
-auto ask_user_for_integer(std::string const prompt) -> int 
+auto ask_user_for_integer(std::string const prompt) -> int
 {
     if (not prompt.empty()) {
     std::cout << prompt;
@@ -428,28 +429,26 @@ auto main() -> int
 // Zadanie 2.0.0.12 (trójkąt)
 #include <iostream>
 #include <string>
-auto ask_user_for_integer(std::string const prompt) -> int
-{
-    if (not prompt.empty()) {
-        std::cout << prompt;
-    }
-    auto value = std::string{};
-    std::getline(std::cin, value);
-    return std::stoi(value);
+auto ask_user_for_integer(std::string const prompt) -> int {
+  if (not prompt.empty()) {
+    std::cout << prompt;
+  }
+  auto value = std::string{};
+  std::getline(std::cin, value);
+  return std::stoi(value);
 }
-auto main() -> int
-{
-    char x = '*';
-    auto const a = ask_user_for_integer("a=");
-    if (a < 2) {
-        std::cout << "Minimal size is 2!" << std::endl;
-        return 1;
+auto main() -> int {
+  char x = '*';
+  auto const a = ask_user_for_integer("a=");
+  if (a < 2) {
+    std::cout << "Minimal size is 2!" << std::endl;
+    return 1;
+  }
+  for (int i = 1; i <= a; i++) {
+    for (int j = 1; j <= i; j++) {
+      std::cout << x << " ";
     }
-    for (int i = 1; i <= a; i++) {
-        for (int j = 1; j <= i; j++) {
-            std::cout << x << " ";
-        }
-        std::cout << std::endl;
-    }
-    return 0;
+    std::cout << std::endl;
+  }
+  return 0;
 }
