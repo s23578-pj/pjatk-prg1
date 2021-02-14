@@ -2,6 +2,7 @@
 #include <random>
 #include <string>
 #include <unistd.h>
+#include <curses.h>
 auto ask_users_for_integer(std::string const prompt) -> int {
   if (not prompt.empty()) {
     std::cout << prompt;
@@ -59,6 +60,7 @@ int dice() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program. \n";
+          while((c = getchar()) != '\n' && c != EOF)
           sleep(2);
           return 0;
         }
@@ -85,6 +87,7 @@ int dice() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program.\n";
+          while((c = getchar()) != '\n' && c != EOF)
           sleep(2);
           return 0;
         }
@@ -114,6 +117,7 @@ int dice() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program.\n";
+          while((c = getchar()) != '\n' && c != EOF)
           sleep(2);
           return 0;
         }
@@ -137,6 +141,7 @@ int dice() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program.\n";
+          while((c = getchar()) != '\n' && c != EOF)
           sleep(2);
           return 0;
         }

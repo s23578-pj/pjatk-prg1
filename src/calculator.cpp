@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iterator>
 #include <stack>
+#include <curses.h>
 #include <stdexcept>
 #include <string>
 #include <unistd.h>
@@ -706,6 +707,7 @@ auto calculator(int argc, char *argv[]) -> int {
                27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
     {
       std::cout << "Thanks for use our program. \n";
+      while((c = getchar()) != '\n' && c != EOF)
       sleep(2);
       return 0;
     } else {

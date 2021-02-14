@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#include <curses.h>
 #include <unistd.h>
 auto ask_user_for_integer(std::string const prompt) -> int {
   if (not prompt.empty()) {
@@ -76,6 +77,7 @@ int zgadywanie() {
               27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
           {
             std::cout << "Thanks for use our program. \n";
+            while((c = getchar()) != '\n' && c != EOF)
             sleep(2);
             return 0;
           }
@@ -96,6 +98,7 @@ int zgadywanie() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program. \n";
+          while((c = getchar()) != '\n' && c != EOF)        
           sleep(2);
           return 0;
         }
@@ -128,6 +131,7 @@ int zgadywanie() {
               27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
           {
             std::cout << "Thanks for use our program. \n";
+            while((c = getchar()) != '\n' && c != EOF)
             sleep(2);
             return 0;
           }
@@ -145,6 +149,7 @@ int zgadywanie() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program. \n";
+          while((c = getchar()) != '\n' && c != EOF)
           sleep(2);
           return 0;
         }
@@ -176,6 +181,7 @@ int zgadywanie() {
               27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
           {
             std::cout << "Thanks for use our program. \n";
+            while((c = getchar()) != '\n' && c != EOF)
             sleep(2);
             return 0;
           }
@@ -194,6 +200,7 @@ int zgadywanie() {
             27) // instrukcja wciśnięcia klawisza ESC z tablicy ASCII
         {
           std::cout << "Thanks for use our program. \n";
+          while((c = getchar()) != '\n' && c != EOF)
           sleep(2);
           return 0;
         }

@@ -1,6 +1,7 @@
 #include <ncurses.h>
 #include <stdio.h>
 #include <stdlib.h>
+//Define Start of program, max amplitude selection and declaring "STAN`s"
 #define START_LINIA 2
 #define MAX 3
 #define STAN_MAIN_MENU 0
@@ -22,8 +23,9 @@
 #define DANE_MENU_START 14
 #define DANE_MENU_LEN 2
 #define DANE_MENU_END DANE_MENU_START + DANE_MENU_LEN - 1
-
+// Mainly to show which button was pressed
 #define INFOKOLUMNA 15
+//
 #define INFOWIERSZ START_LINIA + MAX + 3
 #define STRZALA "<<--"
 // Subprogramy
@@ -249,7 +251,7 @@ int main(int argc, char *argv[]) {
       move(LINES - 1, 1);
       clrtoeol();
 
-      mvprintw(LINES - 1, 1, "Zatwierdzono: %d       Press 'B' to back", wybor);
+      mvprintw(LINES - 1, 1, "Zatwierdzono: %d       Press 'B' to back or 'Q' to logout", wybor);
       attrset(COLOR_PAIR(3) | A_REVERSE | A_BOLD);
 
       if (wybor == 1) {
@@ -306,7 +308,7 @@ int main(int argc, char *argv[]) {
         refresh();
         mvprintw(12, 3, "Your list:");
         clrtoeol();
-        mvprintw(14, 3, "Calkulator");
+        mvprintw(14, 3, "Calculator");
         clrtoeol();
         mvprintw(15, 3, "Notepad*");
         clrtoeol();

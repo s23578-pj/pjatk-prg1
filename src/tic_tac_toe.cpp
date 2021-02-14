@@ -82,6 +82,7 @@ int tic_tack() {
       ruch(p, g);
     std::cout << "Do you wanna play again ? (T = YES) : ";
     std::cin >> w;
+    while((w = getchar()) != '\n' && w != EOF)
     std::cout << "\n\n\n";
   } while ((w == 'T') || (w == 't'));
   return 0;

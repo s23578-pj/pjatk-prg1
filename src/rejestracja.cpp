@@ -102,7 +102,6 @@ auto user_login(std::vector<std::string> &datauser)
   load_userdata(datauser);
   return (datauser.at(0) == login2 && datauser.at(1) == password2);
 }
-
 auto user_register()
     -> std::vector<std::string> // użytkownik wpisuje dane które progam
                                 // zapamietuje w pliku
@@ -125,7 +124,7 @@ auto user_register()
 
   save_userdata(datauser);
   sleep(1.5);
-  user_login(datauser);
+  //user_login(datauser);
 
   return datauser;
 }
